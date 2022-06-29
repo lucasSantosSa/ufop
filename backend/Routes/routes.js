@@ -1,5 +1,5 @@
 const { Router } = require('express');
-const routes = require('../../../../Practice/backend/src/routes');
+const routes = Router();
 
 
 const homepageController = require('./Controllers/homepage')
