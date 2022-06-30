@@ -1,22 +1,11 @@
 import logo from './logo.svg';
-import './App.css';
+import './styles/App.css';
 
 function App() {
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
+    <div id="Main-app">
+      <header id="Main-header">
+        <iframe id="ufop-dashboard" title="Dashboard" src="https://app.powerbi.com/view?r=eyJrIjoiYWUyZTU2OTItNTk5NC00NjVkLWFkNTAtZTI5ODQyZjNhODg0IiwidCI6IjY5NjVkNDMyLWU2OGItNDExMy1iMTI1LTdiNjE1ZGU2OGRlYiJ9" frameborder="0" allowFullScreen="true"></iframe>
       </header>
     </div>
   );
