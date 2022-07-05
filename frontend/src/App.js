@@ -1,12 +1,34 @@
-import logo from './logo.svg';
-import './styles/App.css';
+import React from 'react';
+import './App.css'
+import Home         from './pages/Home';
+import Dashboard    from './pages/Dashboard'
+import MoreProjects from './pages/MoreProjects'
+import Contact      from './pages/Contact'
+import AboutUs      from './pages/AboutUs'
+
+import Sidebar      from './components/Sidebar';
+
+import { useState, useEffect } from 'react';
 
 function App() {
+  const [page,setPage] = useState('Home');
+  
+  const pageSelector=()=>{
+    return(
+      <>
+        <Home         active= {page === 'Home'        } />
+        <Dashboard    active= {page === 'Dashboard'   } />
+        <MoreProjects active= {page === 'MoreProjects'} />
+        <Contact      active= {page === 'Contact'     } />
+        <AboutUs      active= {page === 'AboutUs'     } />
+      </>
+    );
+  }
+
   return (
-    <div id="Main-app">
-      <header id="Main-header">
-        <iframe id="ufop-dashboard" title="Dashboard" src="https://app.powerbi.com/view?r=eyJrIjoiYWUyZTU2OTItNTk5NC00NjVkLWFkNTAtZTI5ODQyZjNhODg0IiwidCI6IjY5NjVkNDMyLWU2OGItNDExMy1iMTI1LTdiNjE1ZGU2OGRlYiJ9" frameborder="0" allowFullScreen="true"></iframe>
-      </header>
+    <div id='MainApp'>
+      <Sidebar page="Home"/>
+      {pageSelector()}
     </div>
   );
 }

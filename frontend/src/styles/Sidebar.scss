@@ -1,0 +1,31 @@
+#sidebar{
+    position: absolute;
+    margin-left: 75%;
+    width: 25%;
+    height: 100vh;
+    background-color: rgb(150, 32, 56);
+    filter: drop-shadow(-10px 0px 30px black);
+    >a{
+        height: 40px;
+        font-size: larger;
+        display: block;
+        color: white;
+        padding: 16px;
+        text-decoration: none;
+        text-align: center;
+        visibility: visible;
+        &.active{
+            background-color: white;
+            color: black;
+            font-weight: 700;
+        }
+        &:hover:not(.active){
+            background-color: rgb(71, 13, 24);
+            font-weight: 600;
+        }
+    }
+    
+    >#home{
+        margin-top: 50px;
+    }
+}

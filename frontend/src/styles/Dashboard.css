@@ -1,0 +1,12 @@
+#Dashboard > #Dashboard-header {
+  background: rgb(150, 32, 56);
+  display: flex;
+  justify-content: center;
+  height: 100vh;
+}
+#Dashboard > #Dashboard-header > iframe {
+  width: 100vw;
+}
+#Dashboard > #Dashboard-header.inactive {
+  visibility: hidden;
+}/*# sourceMappingURL=Dashboard.css.map */

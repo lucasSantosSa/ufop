@@ -1,0 +1,18 @@
+#Home{
+    >#Home-header{
+        background: rgb(150, 32, 56);
+        display: flex;
+        justify-content: center;
+        height: 100vh;
+        >#background-jpg{
+            display: block;
+            margin: auto;
+            margin-right: 25%;
+            height: 100vh;
+            
+        }
+        &.inactive{
+            visibility: hidden;
+        }        
+    }
+}

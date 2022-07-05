@@ -1,0 +1,14 @@
+#Dashboard{
+    >#Dashboard-header{
+        background: rgb(150, 32, 56);
+        display: flex;
+        justify-content: center;
+        height: 100vh;
+        >iframe{
+            width: 100vw;
+        }
+        &.inactive{
+            visibility: hidden;
+        }
+    }
+}
