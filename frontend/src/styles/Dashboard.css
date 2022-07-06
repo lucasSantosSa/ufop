@@ -9,4 +9,5 @@
 }
 #Dashboard > #Dashboard-header.inactive {
   visibility: hidden;
+  height: 0vh;
 }/*# sourceMappingURL=Dashboard.css.map */
