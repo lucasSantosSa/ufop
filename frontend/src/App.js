@@ -14,7 +14,7 @@ import api from './services/api';
 
 
 function App() {
-  const [page,setPage] = useState('');
+  const [page,setPage] = useState('Home');
 
   useEffect(() => {
   },[page]);
