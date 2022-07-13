@@ -10,7 +10,7 @@ import AboutUsIcon from './AboutUsIcon'
 
 
 const Sidebar = (props) =>{
-    const [open, setOpen] = useState(true)
+    const [open, setOpen] = useState(false)
 
     const collapse = () =>{
         if(open){
@@ -23,9 +23,7 @@ const Sidebar = (props) =>{
     }
     
     return(
-        <div id="sidebar" className={open?'open':'closed'}>
-
-            <button id='collapse' onClick={collapse}>Toggle</button>
+        <div id="sidebar" className={open?'open':'closed'} onMouseEnter={collapse} onMouseLeave={collapse}>
 
             <p className={(props.page === 'Home'? 'active':'inactive')} id='Home' onClick={() => props.pageSetter("Home")}>
                 <div id='icon'>
