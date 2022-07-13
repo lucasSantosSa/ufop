@@ -1,7 +1,6 @@
 import React from  'react';
 import '../styles/Sidebar.css'
 import { useState, useEffect } from 'react';
-import api from '../services/api';
 
 import HomeIcon from './HomeIcon'
 import DashboardIcon from './DashboardIcon'
@@ -10,7 +9,7 @@ import ContactIcon from './ContactIcon'
 import AboutUsIcon from './AboutUsIcon'
 
 
-const Sidebar =(props, {apiBridge})=>{
+const Sidebar = (props) =>{
     const [open, setOpen] = useState(true)
 
     const collapse = () =>{
@@ -28,36 +27,36 @@ const Sidebar =(props, {apiBridge})=>{
 
             <button id='collapse' onClick={collapse}>Toggle</button>
 
-            <a className={(props.page === 'Home'? 'active':'inactive')} id='Home' href={api.get('/Home')}>
+            <p className={(props.page === 'Home'? 'active':'inactive')} id='Home' onClick={() => props.pageSetter("Home")}>
                 <div id='icon'>
                     <HomeIcon collapse={open?'open':'closed'}/>
                 </div>
                 <sbtext>Página inicial</sbtext>
-            </a>
-            <a className={(props.page === 'Dashboard'?'active':'inactive')} id='Dashboard' href={api.get('/Dashboard')}>
+            </p>
+            <p className={(props.page === 'Dashboard'?'active':'inactive')} id='Dashboard' onClick={() => props.pageSetter("Dashboard")}>
                 <div id='icon'>
                     <DashboardIcon collapse={open?'open':'closed'}/>
                 </div>
                 <sbtext>Dashboard</sbtext>
-            </a>
-            <a className={(props.page === 'MoreProjects'? 'active':'inactive')} id='MoreProjects' href={api.get('/MoreProjects')}>
+            </p>
+            <p className={(props.page === 'MoreProjects'? 'active':'inactive')} id='MoreProjects' onClick={() => props.pageSetter("MoreProjects")}>
                 <div id='icon'>
                     <MoreInfoIcon collapse={open?'open':'closed'}/>
                 </div>
                 <sbtext>Conheça mais sobre nosso projeto</sbtext>
-            </a>
-            <a className={(props.page === 'Contact'?'active':'inactive')} id='Contact' href={api.get('/Contact')}>
+            </p>
+            <p className={(props.page === 'Contact'?'active':'inactive')} id='Contact' onClick={() => props.pageSetter("Contact")}>
                 <div id='icon'>
                     <ContactIcon collapse={open?'open':'closed'}/>
                 </div>
                 <sbtext>Contato</sbtext>
-            </a>
-            <a className={(props.page === 'AboutUs'?'active':'inactive')} id='AboutUs' href={api.get('/AboutUs')}>
+            </p>
+            <p className={(props.page === 'AboutUs'?'active':'inactive')} id='AboutUs' onClick={() => props.pageSetter("AboutUs")}>
                 <div id='icon'>
                     <AboutUsIcon collapse={open?'open':'closed'}/>
                 </div>
                 <sbtext>Sobre nós</sbtext>
-            </a>
+            </p>
         </div>
     );
 

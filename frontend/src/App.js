@@ -14,29 +14,23 @@ import api from './services/api';
 
 
 function App() {
-  const [page,setPage] = useState('Dashboard');
-  
-  const pageSelector=()=>{
-    return(
-      <>
-        <Sidebar page={page}/>
-        <Home         active= {page === 'Home'        } />
-        <Dashboard    active= {page === 'Dashboard'   } />
-        <MoreProjects active= {page === 'MoreProjects'} />
-        <Contact      active= {page === 'Contact'     } />
-        <AboutUs      active= {page === 'AboutUs'     } />
-      </>
-    );
-  }
+  const [page,setPage] = useState('');
 
-  const apiBridge = (message) =>{
-    const response = api.get(message);
-    console.log(response)
+  useEffect(() => {
+  },[page]);
+
+  function pageSetter(pageIndex){
+    setPage(pageIndex)
   }
 
   return (
     <div id='MainApp'>
-      {pageSelector()}
+      <Sidebar page={page} pageSetter={pageSetter}/>
+      <Home         active= {page === 'Home'        } />
+      <Dashboard    active= {page === 'Dashboard'   } />
+      <MoreProjects active= {page === 'MoreProjects'} />
+      <Contact      active= {page === 'Contact'     } />
+      <AboutUs      active= {page === 'AboutUs'     } />
       <img src="https://www.southamericanescapes.com/wp-content/uploads/2014/11/OuroPreto.jpg" alt="ouropretobackground" id="background-jpg" />
     </div>
   );
