@@ -1,15 +1,15 @@
 #Dashboard{
     >#Dashboard-header{
+        position: inherit;
         background: rgb(150, 32, 56);
-        display: flex;
-        justify-content: center;
         height: 100vh;
+        width: 100vw;
         >iframe{
-            width: 100vw;
+            height: 100%;
+            width: 95%;
         }
         &.inactive{
-            visibility: hidden;
-            height: 0vh;
+            display: none;
         }
     }
 }

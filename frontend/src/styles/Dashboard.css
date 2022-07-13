@@ -1,13 +1,13 @@
 #Dashboard > #Dashboard-header {
+  position: inherit;
   background: rgb(150, 32, 56);
-  display: flex;
-  justify-content: center;
   height: 100vh;
-}
-#Dashboard > #Dashboard-header > iframe {
   width: 100vw;
 }
+#Dashboard > #Dashboard-header > iframe {
+  height: 100%;
+  width: 95%;
+}
 #Dashboard > #Dashboard-header.inactive {
-  visibility: hidden;
-  height: 0vh;
+  display: none;
 }/*# sourceMappingURL=Dashboard.css.map */

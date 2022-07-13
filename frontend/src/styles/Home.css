@@ -1,15 +1,7 @@
 #Home > #Home-header {
-  background: rgb(150, 32, 56);
-  display: flex;
-  justify-content: center;
-  height: 100vh;
-}
-#Home > #Home-header > #background-jpg {
-  display: block;
-  margin: auto;
-  margin-right: 25%;
-  height: 100vh;
+  background-color: rgb(150, 32, 56);
+  height: 100%;
 }
 #Home > #Home-header.inactive {
-  visibility: hidden;
+  display: none;
 }/*# sourceMappingURL=Home.css.map */

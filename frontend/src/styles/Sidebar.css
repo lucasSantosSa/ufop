@@ -1,30 +1,59 @@
 #sidebar {
-  position: absolute;
-  margin-left: 75%;
-  width: 25%;
+  position: fixed;
+  right: 0;
+  width: 20%;
   height: 100vh;
   background-color: rgb(150, 32, 56);
-  filter: drop-shadow(-10px 0px 30px black);
+  box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+  transition: 1s;
+  overflow: hidden;
+}
+#sidebar > button {
+  border: none;
+}
+#sidebar > #Home {
+  margin-top: 50px;
 }
 #sidebar > a {
   height: 40px;
-  font-size: larger;
   display: block;
   color: white;
   padding: 16px;
   text-decoration: none;
-  text-align: center;
-  visibility: visible;
 }
 #sidebar > a.active {
   background-color: white;
   color: black;
   font-weight: 700;
 }
+#sidebar > a.active > #icon {
+  filter: drop-shadow(0 0 3px black);
+  fill: rgb(150, 32, 56);
+}
 #sidebar > a:hover:not(.active) {
   background-color: rgb(71, 13, 24);
   font-weight: 600;
 }
-#sidebar > #home {
-  margin-top: 50px;
+#sidebar > a:hover:not(.active) > #icon {
+  filter: drop-shadow(0 0 3px black);
+  fill: white;
+}
+#sidebar > a > sbtext {
+  font-size: larger;
+}
+#sidebar > a > #icon {
+  display: none;
+  fill: rgb(71, 17, 28);
+}
+#sidebar.closed {
+  width: 4%;
+  filter: drop-shadow(0px 0px 0px black);
+}
+#sidebar.closed > a > sbtext {
+  visibility: hidden;
+}
+#sidebar.closed > a > #icon {
+  position: relative;
+  display: block;
+  margin-left: -30%;
 }/*# sourceMappingURL=Sidebar.css.map */

@@ -1,7 +1,7 @@
 #Contact{
     >#Contact-header{
         &.inactive{
-            visibility: hidden;
+            display: none;
         }
     }
 }
