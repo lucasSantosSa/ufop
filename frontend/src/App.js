@@ -7,7 +7,7 @@ import Dashboard    from './pages/Dashboard'
 import MoreProjects from './pages/MoreProjects'
 import Contact      from './pages/Contact'
 import AboutUs      from './pages/AboutUs'
-
+import Carousel     from './components/Carousel';
 import Sidebar      from './components/Sidebar';
 import api from './services/api';
 
@@ -31,7 +31,6 @@ function App() {
       <MoreProjects active= {page === 'MoreProjects'} />
       <Contact      active= {page === 'Contact'     } />
       <AboutUs      active= {page === 'AboutUs'     } />
-      <img src="https://www.southamericanescapes.com/wp-content/uploads/2014/11/OuroPreto.jpg" alt="ouropretobackground" id="background-jpg" />
     </div>
   );
 }

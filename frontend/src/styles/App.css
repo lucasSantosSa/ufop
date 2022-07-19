@@ -6,35 +6,4 @@
   margin-bottom: 15%;
   padding: 0%;
   overflow: hidden;
-  transition: 1s;
-}
-#MainApp > #background-jpg {
-  height: 100%;
-  max-width: 100vw;
-  -webkit-animation-name: ltr;
-          animation-name: ltr;
-  -webkit-animation-direction: alternate;
-          animation-direction: alternate;
-  -webkit-animation-iteration-count: infinite;
-          animation-iteration-count: infinite;
-  -webkit-animation-duration: 50s;
-          animation-duration: 50s;
-}
-
-@-webkit-keyframes ltr {
-  0% {
-    margin-left: 0px;
-  }
-  100% {
-    margin-left: 500px;
-  }
-}
-
-@keyframes ltr {
-  0% {
-    margin-left: 0px;
-  }
-  100% {
-    margin-left: 500px;
-  }
 }/*# sourceMappingURL=App.css.map */

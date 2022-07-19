@@ -1,0 +1,42 @@
+#Carousel > #Image {
+  -webkit-animation: 5s ltr;
+          animation: 5s ltr;
+  transition: cubic-bezier();
+}
+#Carousel > #Image.inactive {
+  display: none;
+}
+#Carousel > #Image.active > img {
+  height: 100vh;
+}
+#Carousel > #Image.active > #label {
+  padding-left: 30px;
+  margin-top: -5%;
+  filter: drop-shadow(0 0 10px black);
+  color: white;
+  font-size: 20pt;
+}
+
+@-webkit-keyframes ltr {
+  0% {
+    margin-left: -50%;
+  }
+  50% {
+    margin-left: 0%;
+  }
+  100% {
+    margin-left: 100%;
+  }
+}
+
+@keyframes ltr {
+  0% {
+    margin-left: -50%;
+  }
+  50% {
+    margin-left: 0%;
+  }
+  100% {
+    margin-left: 100%;
+  }
+}/*# sourceMappingURL=Carousel.css.map */

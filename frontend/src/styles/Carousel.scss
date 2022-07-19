@@ -1,0 +1,26 @@
+#Carousel{
+    >#Image{
+        animation: 5s ltr;
+        transition: cubic-bezier();
+        &.inactive{
+            display: none;
+        }
+        &.active{
+            >img{
+                height: 100vh;
+            }
+            >#label{
+                padding-left: 30px;
+                margin-top: -5%;
+                color: white;
+                font-size: 20pt;
+            }
+        }
+    }
+}
+
+@keyframes ltr {
+    0%   {margin-left:-50%;}
+    50%  {margin-left: 0% ;}
+    100% {margin-left: 100%;}
+}
