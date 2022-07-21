@@ -4,10 +4,10 @@ const routes = Router();
 
 const sidebarController = require('./Controllers/sidebarController')
 
-routes.get( '/Home',         sidebarController.home          );
-routes.get( '/Dashboard',    sidebarController.dashboard     );
-routes.get( '/MoreProjects', sidebarController.moreProjects  );
-routes.get( '/Contact',      sidebarController.contact       );
-routes.get( '/AboutUs',      sidebarController.aboutUs       );
+routes.get( '/home',         sidebarController.home          );
+routes.get( '/dashboard',    sidebarController.dashboard     );
+routes.get( '/moreprojects', sidebarController.moreProjects  );
+routes.get( '/contact',      sidebarController.contact       );
+routes.get( '/aboutus',      sidebarController.aboutUs       );
 
 module.exports = routes;

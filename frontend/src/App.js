@@ -7,30 +7,32 @@ import Dashboard    from './pages/Dashboard'
 import MoreProjects from './pages/MoreProjects'
 import Contact      from './pages/Contact'
 import AboutUs      from './pages/AboutUs'
-import Carousel     from './components/Carousel';
 import Sidebar      from './components/Sidebar';
 import api from './services/api';
 
 
 
 function App() {
-  const [page,setPage] = useState('Home');
+  const [page,setPage] = useState('dashboard');
+  const [pageRoute, setPageRoute] = useState('/dashboard')
 
   useEffect(() => {
+    api.get(pageRoute)
   },[page]);
 
-  function pageSetter(pageIndex){
-    setPage(pageIndex)
+  async function rerouter(address){
+    setPageRoute("/"+address);
+    await api.get(pageRoute);
+    setPage(address)
   }
-
   return (
     <div id='MainApp'>
-      <Sidebar page={page} pageSetter={pageSetter}/>
-      <Home         active= {page === 'Home'        } />
-      <Dashboard    active= {page === 'Dashboard'   } />
-      <MoreProjects active= {page === 'MoreProjects'} />
-      <Contact      active= {page === 'Contact'     } />
-      <AboutUs      active= {page === 'AboutUs'     } />
+      <Sidebar page={page} rerouter={rerouter}/>
+      <Home         active= {page === 'home'        } />
+      <Dashboard    active= {page === 'dashboard'   } />
+      <MoreProjects active= {page === 'moreprojects'} />
+      <Contact      active= {page === 'contact'     } />
+      <AboutUs      active= {page === 'aboutus'     } />
     </div>
   );
 }

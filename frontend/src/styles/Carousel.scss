@@ -1,26 +1,42 @@
+* {
+    box-sizing: border-box;
+  }
 #Carousel{
-    >#Image{
-        animation: 5s ltr;
-        transition: cubic-bezier();
-        &.inactive{
-            display: none;
-        }
-        &.active{
-            >img{
-                height: 100vh;
+    overflow: hidden;
+    >#row{
+        clear: both;
+        display: table;
+        >#col{
+            float: left;
+            width: 33.33%;
+            padding: 5px;
+            animation: 8s ltr;
+            &.inactive{
+                display: none;
             }
-            >#label{
-                padding-left: 30px;
-                margin-top: -5%;
-                color: white;
-                font-size: 20pt;
-            }
+            &.active{
+                >#image{
+                    height: 100vh; 
+                }
+                >#label{
+                    position: relative;
+                    padding-left: 30px;
+                    margin-top: -50%;
+                    color: white;
+                    font-size: 20pt;
+                }
+            }  
         }
     }
+    >row::after{
+        content: "";
+        clear: both;
+        display: table;
+    };
 }
 
 @keyframes ltr {
-    0%   {margin-left:-50%;}
+    0%   {margin-left:-100%;}
     50%  {margin-left: 0% ;}
-    100% {margin-left: 100%;}
+    100% {margin-left: 300%;}
 }

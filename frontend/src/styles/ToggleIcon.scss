@@ -1,0 +1,33 @@
+#ToggleIcon{
+    height:50px;
+    width: 50px;
+    transition: 1s;
+    cursor: pointer;
+    #bg{
+        transition: 1s;
+        &.on{
+            fill: white;
+        }
+        &.off{
+            fill: rgb(79, 14, 27);
+        }
+    }
+    #lBall{
+        position: absolute;
+        &.left{
+            fill: rgb(79, 14, 27);
+        }
+        &.right{
+            display: none;
+        }
+    }
+    #rBall{
+        position: absolute;
+        &.left{
+            display: none;
+        }
+        &.right{
+            fill: white;
+        }
+    }
+}

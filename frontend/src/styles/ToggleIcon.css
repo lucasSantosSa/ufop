@@ -1,0 +1,33 @@
+#ToggleIcon {
+  height: 50px;
+  width: 50px;
+  transition: 1s;
+  cursor: pointer;
+}
+#ToggleIcon #bg {
+  transition: 1s;
+}
+#ToggleIcon #bg.on {
+  fill: white;
+}
+#ToggleIcon #bg.off {
+  fill: rgb(79, 14, 27);
+}
+#ToggleIcon #lBall {
+  position: absolute;
+}
+#ToggleIcon #lBall.left {
+  fill: rgb(79, 14, 27);
+}
+#ToggleIcon #lBall.right {
+  display: none;
+}
+#ToggleIcon #rBall {
+  position: absolute;
+}
+#ToggleIcon #rBall.left {
+  display: none;
+}
+#ToggleIcon #rBall.right {
+  fill: white;
+}/*# sourceMappingURL=ToggleIcon.css.map */

@@ -1,42 +1,60 @@
-#Carousel > #Image {
-  -webkit-animation: 5s ltr;
-          animation: 5s ltr;
-  transition: cubic-bezier();
+* {
+  box-sizing: border-box;
 }
-#Carousel > #Image.inactive {
+
+#Carousel {
+  overflow: hidden;
+}
+#Carousel > #row {
+  clear: both;
+  display: table;
+}
+#Carousel > #row > #col {
+  float: left;
+  width: 33.33%;
+  padding: 5px;
+  -webkit-animation: 8s ltr;
+          animation: 8s ltr;
+}
+#Carousel > #row > #col.inactive {
   display: none;
 }
-#Carousel > #Image.active > img {
+#Carousel > #row > #col.active > #image {
   height: 100vh;
 }
-#Carousel > #Image.active > #label {
+#Carousel > #row > #col.active > #label {
+  position: relative;
   padding-left: 30px;
-  margin-top: -5%;
-  filter: drop-shadow(0 0 10px black);
+  margin-top: -50%;
   color: white;
   font-size: 20pt;
+}
+#Carousel > row::after {
+  content: "";
+  clear: both;
+  display: table;
 }
 
 @-webkit-keyframes ltr {
   0% {
-    margin-left: -50%;
+    margin-left: -100%;
   }
   50% {
     margin-left: 0%;
   }
   100% {
-    margin-left: 100%;
+    margin-left: 300%;
   }
 }
 
 @keyframes ltr {
   0% {
-    margin-left: -50%;
+    margin-left: -100%;
   }
   50% {
     margin-left: 0%;
   }
   100% {
-    margin-left: 100%;
+    margin-left: 300%;
   }
 }/*# sourceMappingURL=Carousel.css.map */

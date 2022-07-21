@@ -1,60 +1,72 @@
 #sidebar {
   position: fixed;
   right: 0;
-  width: 20%;
-  height: 100vh;
+  height: 100%;
   background-color: rgb(150, 32, 56);
   box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
-  transition: 1s;
-  overflow: hidden;
 }
-#sidebar > button {
-  border: none;
-}
-#sidebar > #Home {
-  margin-top: 50px;
-}
-#sidebar > p {
-  height: 40px;
+#sidebar > span {
+  position: relative;
+  height: 8%;
   display: block;
   color: white;
-  padding: 16px;
   text-decoration: none;
+  text-align: center;
+  white-space: nowrap;
 }
-#sidebar > p.active {
+#sidebar > span > #label {
+  padding-top: 4%;
+  font-size: larger;
+}
+#sidebar > span > #icon {
+  height: 50%;
+  width: 50%;
+}
+#sidebar > span.active {
   background-color: white;
   color: black;
   font-weight: 700;
 }
-#sidebar > p.active > #icon {
+#sidebar > span.active > #icon {
   filter: drop-shadow(0 0 3px black);
   fill: rgb(150, 32, 56);
 }
-#sidebar > p:hover:not(.active) {
+#sidebar > span:hover:not(.active) {
   background-color: rgb(71, 13, 24);
   font-weight: 600;
   cursor: pointer;
 }
-#sidebar > p:hover:not(.active) > #icon {
+#sidebar > span:hover:not(.active) > #icon {
   filter: drop-shadow(0 0 3px black);
   fill: white;
 }
-#sidebar > p > sbtext {
-  font-size: larger;
+#sidebar.open {
+  transition: 1s;
+  width: 400px;
 }
-#sidebar > p > #icon {
+#sidebar.open #toggle {
+  padding-top: 10px;
+  padding-left: 10%;
+  filter: drop-shadow(0 0 3px black);
+}
+#sidebar.open > span > #icon {
   display: none;
-  fill: rgb(71, 17, 28);
 }
 #sidebar.closed {
-  width: 4%;
-  filter: drop-shadow(0px 0px 0px black);
+  width: 80px;
+  transition: 0.1s;
 }
-#sidebar.closed > p > sbtext {
-  visibility: hidden;
+#sidebar.closed #toggle {
+  padding-top: 10px;
+  padding-left: 10%;
+  filter: drop-shadow(0 0 3px white);
 }
-#sidebar.closed > p > #icon {
-  position: relative;
-  display: block;
-  margin-left: -30%;
+#sidebar.closed > span > #label {
+  display: none;
+}
+#sidebar.closed > span > #icon {
+  padding-top: 10%;
+  margin-left: auto;
+  margin-right: auto;
+  fill: rgb(71, 17, 28);
 }/*# sourceMappingURL=Sidebar.css.map */
